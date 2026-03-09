@@ -6,6 +6,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.storage.WorldData;
 
 public class TraderSpawnTracker {
     private static long lastTraderSpawnTime = -1;
@@ -14,6 +15,7 @@ public class TraderSpawnTracker {
     private static long spawnNotificationTime = 0;
     private static Entity lastKnownTrader = null;
     private static int traderCount = 0;
+    private static ClientLevel lastLevel = null;
     
     // Wandering trader spawn mechanics (vanilla values)
     private static final int MIN_SPAWN_DELAY = 24000; // 1 day (20 minutes)
@@ -26,6 +28,12 @@ public class TraderSpawnTracker {
         if (client.level == null) {
             worldStartTime = -1;
             return;
+        }
+
+        if (lastLevel == null || lastLevel != client.level)
+        {
+            lastLevel = client.level;
+            resetCount();
         }
         
         Level world = client.level;
@@ -189,6 +197,7 @@ public class TraderSpawnTracker {
         lastKnownTrader = null;
         traderJustSpawned = false;
         traderCount = 0;
+        System.out.println("RESET COUNT!");
         
         // Try to detect existing traders to get a better baseline
         checkForExistingTraders(client);

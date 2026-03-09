@@ -38,7 +38,7 @@ public class WorldSpawnDataReader {
         worldTime = Math.max(0, worldTime);
         
         // Debug output
-        System.out.println("[TraderAlert] World time: " + worldTime + " ticks");
+//        System.out.println("[TraderAlert] World time: " + worldTime + " ticks");
         
         // Calculate next spawn attempt based on vanilla mechanics
         long timeSinceWorldStart = worldTime;
@@ -46,7 +46,7 @@ public class WorldSpawnDataReader {
         // If less than 1 day old, wait for first spawn
         if (timeSinceWorldStart < 24000) {
             int ticksUntilFirstSpawn = (int)(24000 - timeSinceWorldStart);
-            System.out.println("[TraderAlert] Before first spawn eligibility: " + ticksUntilFirstSpawn + " ticks");
+//            System.out.println("[TraderAlert] Before first spawn eligibility: " + ticksUntilFirstSpawn + " ticks");
             return new SpawnData(ticksUntilFirstSpawn, 0.0);
         }
         
