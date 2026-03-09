@@ -1,0 +1,6 @@
+{
+  "subtitles.traderalert.ding": "Wandering Trader nearby",
+  "key.traderalert.toggle_overlay": "Toggle Trader Info Display",
+  "key.traderalert.toggle_notification": "Toggle Spawn Notifications",
+  "category.traderalert": "Wandering Trader Alert"
+}

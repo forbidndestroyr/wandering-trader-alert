@@ -1,0 +1,12 @@
+{
+  "ding": {
+    "subtitle": "subtitles.traderalert.ding",
+    "sounds": [
+      {
+        "name": "minecraft:block.note_block.bell",
+        "volume": 1.0,
+        "pitch": 1.2
+      }
+    ]
+  }
+}

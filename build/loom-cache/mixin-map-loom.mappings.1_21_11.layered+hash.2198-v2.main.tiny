@@ -1,0 +1,3 @@
+v1	named	intermediary
+FIELD	com/example/traderalert/mixin/ChatMixin	Lnet/minecraft/client/gui/components/EditBox;	input	field_2382
+FIELD	com/example/traderalert/mixin/InGameHudMixin	Lnet/minecraft/client/Minecraft;	minecraft	field_2035

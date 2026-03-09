@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "traderalert",
+  "version": "${version}",
+  "name": "Wandering Trader Alert",
+  "description": "Plays a repeating dinging sound when a Wandering Trader is within render distance",
+  "authors": [
+    "Your Name"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+  "license": "MIT",
+  "icon": "",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.example.traderalert.WanderingTraderAlert"
+    ]
+  },
+  "mixins": [
+    "traderalert.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21"
+  }
+}

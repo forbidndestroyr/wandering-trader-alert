@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.example.traderalert.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ClientTickMixin",
+    "InGameHudMixin",
+    "ChatMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

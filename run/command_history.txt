@@ -1,0 +1,36 @@
+/summon minecraft:wandering_trader ~-5 ~ ~-5
+/kill @e[type=minecraft:wandering_trader]
+/tick rate 10000
+/fill ~ ~50 ~ ~50 ~50 ~50 cobblestone
+/summon minecraft:wandering_trader ~-5 ~ ~-5
+/kill @e[type=minecraft:wandering_trader]
+/summon minecraft:wandering_trader ~-5 ~ ~-5
+/version
+/summon minecraft:wandering_trader
+/kill @e[type=minecraft:wandering_trader]
+/summon minecraft:wandering_trader
+/kill @e[type=minecraft:wandering_trader]
+/summon minecraft:wandering_trader
+/kill @e[type=minecraft:wandering_trader]
+/summon minecraft:wandering_trader
+/kill @e[type=minecraft:wandering_trader]
+/tick rate 10000
+/fill ~ ~50 ~ ~50 ~50 ~50 cobblestone
+/tp ~ ~30 ~
+/tick sprint 30s
+/tick step 1000000000s
+/tick query
+/tick sprint 1d
+/tick rate 20
+/weather clear
+/tick query
+/tick sprint 10d
+/tick freeze
+/tick unfreeze
+/tick sprint 100d
+/kill @e[type=minecraft:spider]
+/kill @e[type=minecraft:creeper]
+/kill @e[type=minecraft:spider]
+/gamerule spawn_wandering_traders
+/debug
+/debug start
