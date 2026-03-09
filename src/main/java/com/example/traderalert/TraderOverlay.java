@@ -50,7 +50,7 @@ public class TraderOverlay {
         
         // Draw background
         int bgColor = 0x80000000; // Semi-transparent black
-        graphics.fill(x - 4, y - 2, x + maxWidth + 4, y + lineHeight * 2 + 2, bgColor);
+        graphics.fill(x - 4, y - 2, x + maxWidth + 4, y + lineHeight * 3 + 2, bgColor);
         
         // Draw text
         graphics.drawString(font, timeString, x, y, 0xFFFFFFFF, true);
