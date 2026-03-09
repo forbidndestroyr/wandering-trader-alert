@@ -188,7 +188,7 @@ public class TraderSpawnTracker {
         worldStartTime = -1;
         lastKnownTrader = null;
         traderJustSpawned = false;
-        resetCount();
+        traderCount = 0;
         
         // Try to detect existing traders to get a better baseline
         checkForExistingTraders(client);
