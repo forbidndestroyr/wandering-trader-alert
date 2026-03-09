@@ -41,6 +41,12 @@ public class TraderOverlay {
         
         int x = screenWidth - maxWidth - padding;
         int y = padding;
+
+        // render traderCount 
+
+        String traderCountStr = "Traders Spawned: " + TraderSpawnTracker.getCount();
+
+        
         
         // Draw background
         int bgColor = 0x80000000; // Semi-transparent black
@@ -49,6 +55,7 @@ public class TraderOverlay {
         // Draw text
         graphics.drawString(font, timeString, x, y, 0xFFFFFFFF, true);
         graphics.drawString(font, chanceString, x, y + lineHeight, 0xFFFFFFFF, true);
+        graphics.drawString(font, traderCountStr, x, y + lineHeight * 2, 0xFFFFFFFF, true);
     }
     
     public static void renderSpawnNotification(GuiGraphics graphics, Minecraft client) {
