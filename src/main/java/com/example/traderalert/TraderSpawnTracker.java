@@ -228,4 +228,9 @@ public class TraderSpawnTracker {
             return String.format("%ds", seconds);
         }
     }
+
+    public static int getCount()
+    {
+        return traderCount;
+    }
 }
