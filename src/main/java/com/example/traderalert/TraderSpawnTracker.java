@@ -13,6 +13,7 @@ public class TraderSpawnTracker {
     private static boolean traderJustSpawned = false;
     private static long spawnNotificationTime = 0;
     private static Entity lastKnownTrader = null;
+    private static int traderCount = 0;
     
     // Wandering trader spawn mechanics (vanilla values)
     private static final int MIN_SPAWN_DELAY = 24000; // 1 day (20 minutes)
@@ -63,6 +64,7 @@ public class TraderSpawnTracker {
             lastTraderSpawnTime = client.level.getDayTime();
             traderJustSpawned = true;
             spawnNotificationTime = System.currentTimeMillis();
+            traderCount++;
             
             // IMPORTANT: Reset spawn tracking when trader actually spawns
             // This ensures spawn chance resets to base value
